@@ -3,50 +3,299 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Rebecca Parman Aalto Arkitekt</title>
+
 <style>
-  body, html {
-    margin: 0;
-    height: 100%;
-  }
 
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    height: 100vh;
-  }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Helvetica, Arial, sans-serif;
+}
 
-  .grid img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:flex-end;
+gap:40px;
+padding:25px;
+z-index:10;
+background:rgba(255,255,255,0.2);
+backdrop-filter: blur(6px);
+}
 
-  .text {
-    position: absolute;
-    top: 50%;
-    left: 40px;
-    transform: translateY(-50%);
-    font-size: 3rem;
-    font-weight: bold;
-    color: transparent;
-    -webkit-text-stroke: 2px white;
-    text-stroke: 2px white;
-    font-family: Arial, sans-serif;
-  }
+nav a{
+text-decoration:none;
+color:white;
+font-weight:500;
+cursor:pointer;
+}
+
+section{
+min-height:100vh;
+padding:120px 10%;
+}
+
+/* HERO */
+
+.hero{
+background:url("images/hero.jpg") center/cover no-repeat;
+display:flex;
+align-items:center;
+}
+
+.hero h1{
+font-size:70px;
+color:transparent;
+-webkit-text-stroke:2px white;
+max-width:600px;
+}
+
+/* ABOUT */
+
+#about{
+background:#fff;
+line-height:1.7;
+font-size:18px;
+}
+
+/* PROJECTS */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+}
+
+.circle{
+width:250px;
+height:250px;
+border-radius:50%;
+overflow:hidden;
+cursor:pointer;
+}
+
+.circle img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.project-title{
+text-align:center;
+margin-top:10px;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:1fr 1fr;
+}
+
+.gallery img{
+width:100%;
+height:100vh;
+object-fit:cover;
+cursor:pointer;
+}
+
+/* CONTACT */
+
+form{
+display:flex;
+flex-direction:column;
+gap:15px;
+max-width:500px;
+}
+
+input, textarea{
+padding:12px;
+border:1px solid #ccc;
+}
+
+button{
+padding:14px;
+border:none;
+background:black;
+color:white;
+cursor:pointer;
+}
+
 </style>
 </head>
+
+
 <body>
 
-<div class="grid">
-  <img src="images/bild1.jpg" alt="">
-  <img src="images/material_rendering_studier.pdf" alt="">
-  <img src="images/material_rendering_studier_2.pdf" alt="">
-  <img src="images/bild4.jpg" alt="">
-</div>
+<nav>
+<a onclick="scrollToSection('about')">About</a>
+<a onclick="scrollToSection('projects')">Projects</a>
+<a onclick="scrollToSection('contact')">Contact</a>
+</nav>
 
-<div class="text">Rebecca Parman Aalto Arkitekt</div>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>
+Rebecca Parman Aalto Arkitekt
+</h1>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<p>
+Colorspace är ett företag skapat av arkitekten Rebecca Parman Aalto med en vision om en färggrannare samhällsmiljö. Både i den fysiska gestaltningen och sociala värden. Colorspace:s vision är att låta färg, form och kreativitet ta plats i våra byggda miljöer.
+</p>
+
+<br>
+
+<p>
+Jag, Rebecca Parman Aalto, har en bakgrund inom konst och IT samt ett starkt tekniskt intresse. Program jag använder inkluderar bland annat:
+AutoCAD, Rhinoceros 8, Revit, Affinity, Illustrator, Photoshop, D5, Twin Motion, Blender, med fler.
+</p>
+
+<br>
+
+<p>
+Jag studerar nu åk2 på Arkitektutbildningen, KTH.
+Tillgänglighet: alla dagar i veckan förutom måndag kväll och när det finns obligatoriska föreläsningar.
+</p>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<div class="grid" id="projectGrid"></div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2>Rebecca Parman Aalto</h2>
+
+<p>
+Nummer: 070 437 64 16<br>
+mail: parman.rebecca@hotmail.com
+</p>
+
+<br><br>
+
+<h3>Kontakta mig direkt</h3>
+
+<form action="https://formspree.io/f/YOUR_ID" method="POST">
+
+<input type="text" name="name" placeholder="Namn" required>
+<input type="email" name="email" placeholder="Email" required>
+<textarea name="message" placeholder="Meddelande" required></textarea>
+
+<button>Skicka</button>
+
+</form>
+
+</section>
+
+
+<script>
+
+/* SCROLL */
+
+function scrollToSection(id){
+document.getElementById(id).scrollIntoView({behavior:"smooth"});
+}
+
+
+/* PROJECT DATA */
+
+const projects = [
+
+{
+title:"Projekt 1",
+img:"images/project1.jpg",
+gallery:[
+"images/p1-1.jpg",
+"images/p1-2.jpg",
+"images/p1-3.jpg",
+"images/p1-4.jpg"
+]
+},
+
+{
+title:"Projekt 2",
+img:"images/project2.jpg",
+gallery:[
+"images/p2-1.jpg",
+"images/p2-2.jpg",
+"images/p2-3.jpg",
+"images/p2-4.jpg"
+]
+}
+
+];
+
+
+/* CREATE GRID */
+
+const grid = document.getElementById("projectGrid");
+
+projects.forEach((p,i)=>{
+
+const div = document.createElement("div");
+
+div.innerHTML = `
+<div class="circle" onclick="openGallery(${i})">
+<img src="${p.img}">
+</div>
+<div class="project-title">${p.title}</div>
+`;
+
+grid.appendChild(div);
+
+});
+
+
+/* OPEN GALLERY */
+
+function openGallery(i){
+
+const galleryHTML = projects[i].gallery.map(img=>`
+<img src="${img}" onclick="fullscreen(this)">
+`).join("");
+
+document.body.innerHTML = `
+<div class="gallery">
+${galleryHTML}
+</div>
+`;
+
+}
+
+
+/* FULLSCREEN IMAGE */
+
+function fullscreen(img){
+
+img.requestFullscreen();
+
+}
+
+</script>
 
 </body>
 </html>
