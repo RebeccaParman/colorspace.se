@@ -1,3 +1,5 @@
+<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="sv">
 <head>
@@ -6,18 +8,23 @@
 <title>Rebecca Parman Aalto Arkitekt</title>
 
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
 <nav>
+
 <a href="#about">About</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
+
 </nav>
 
 <header class="hero">
+
 <h1>Rebecca Parman Aalto Arkitekt</h1>
+
 </header>
 
 <section id="about">
@@ -25,7 +32,7 @@
 <h2>About</h2>
 
 <p>
-Colorspace är ett företag skapat av arkitekten Rebecca Parman Aalto med en vision om en färggrannare samhällsmiljö.
+Colorspace är ett företag skapat av Rebecca Parman Aalto med en vision om en färggrannare samhällsmiljö.
 </p>
 
 </section>
@@ -36,32 +43,32 @@ Colorspace är ett företag skapat av arkitekten Rebecca Parman Aalto med en vis
 
 <div class="projects">
 
-<a class="project" href="project1.html">
+<a class="project" href="projekt/projekt1/">
 <img src="images/project1.jpg">
 <h3>Projekt 1</h3>
 </a>
 
-<a class="project" href="project2.html">
+<a class="project" href="projekt/projekt2/">
 <img src="images/project2.jpg">
 <h3>Projekt 2</h3>
 </a>
 
-<a class="project" href="project3.html">
+<a class="project" href="projekt/projekt3/">
 <img src="images/project3.jpg">
 <h3>Projekt 3</h3>
 </a>
 
-<a class="project" href="project4.html">
+<a class="project" href="projekt/projekt4/">
 <img src="images/project4.jpg">
 <h3>Projekt 4</h3>
 </a>
 
-<a class="project" href="project5.html">
+<a class="project" href="projekt/projekt5/">
 <img src="images/project5.jpg">
 <h3>Projekt 5</h3>
 </a>
 
-<a class="project" href="project6.html">
+<a class="project" href="projekt/projekt6/">
 <img src="images/project6.jpg">
 <h3>Projekt 6</h3>
 </a>
@@ -75,409 +82,21 @@ Colorspace är ett företag skapat av arkitekten Rebecca Parman Aalto med en vis
 <h2>Kontakt</h2>
 
 <p>
-Rebecca Parman Aalto<br>
-0704376416<br>
+
+Rebecca Parman Aalto
+
+<br>
+
+0704376416
+
+<br>
+
 parman.rebecca@hotmail.com
+
 </p>
 
 </section>
 
 </body>
+
 </html>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Helvetica,Arial,sans-serif;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-background:#fff;
-color:#222;
-line-height:1.6;
-}
-
-nav{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-padding:20px 8%;
-display:flex;
-justify-content:flex-end;
-gap:40px;
-background:rgba(255,255,255,.9);
-backdrop-filter:blur(10px);
-z-index:1000;
-}
-
-nav a{
-text-decoration:none;
-color:#222;
-font-weight:600;
-transition:.3s;
-}
-
-nav a:hover{
-color:#777;
-}
-
-.hero{
-height:100vh;
-background:url("images/hero.jpg") center/cover;
-display:flex;
-align-items:center;
-justify-content:center;
-}
-
-.hero h1{
-font-size:70px;
-color:white;
-text-align:center;
-text-shadow:0 0 20px rgba(0,0,0,.5);
-}
-
-section{
-padding:100px 8%;
-}
-
-section h2{
-font-size:40px;
-margin-bottom:40px;
-}
-
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(380px,1fr));
-gap:40px;
-}
-
-.project{
-text-decoration:none;
-color:#222;
-transition:.3s;
-}
-
-.project:hover{
-transform:translateY(-8px);
-}
-
-.project img{
-width:100%;
-height:320px;
-object-fit:cover;
-display:block;
-}
-
-.project h3{
-margin-top:15px;
-font-size:24px;
-text-align:center;
-font-weight:500;
-}
-
-#contact p{
-font-size:20px;
-}
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(450px,1fr));
-gap:25px;
-padding:120px 8%;
-}
-
-.gallery img{
-width:100%;
-cursor:pointer;
-transition:.3s;
-}
-
-.gallery img:hover{
-transform:scale(1.02);
-}
-
-.back{
-display:inline-block;
-margin:40px 8%;
-text-decoration:none;
-color:black;
-font-size:18px;
-font-weight:bold;
-}
-
-@media(max-width:800px){
-
-.hero h1{
-font-size:42px;
-}
-
-.projects{
-grid-template-columns:1fr;
-}
-
-.project img{
-height:auto;
-}
-
-.gallery{
-grid-template-columns:1fr;
-}
-
-}
-
-function fullscreen(img){
-    if(img.requestFullscreen){
-        img.requestFullscreen();
-    }else if(img.webkitRequestFullscreen){
-        img.webkitRequestFullscreen();
-    }else if(img.msRequestFullscreen){
-        img.msRequestFullscreen();
-    }
-}
-
-document.querySelectorAll(".gallery img").forEach(img=>{
-    img.addEventListener("click",function(){
-        fullscreen(this);
-    });
-});
-
-<!DOCTYPE html>
-<html lang="sv">
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Projekt 1</title>
-
-<link rel="stylesheet" href="style.css">
-
-</head>
-
-<body>
-
-<a class="back" href="index.html">← Tillbaka</a>
-
-<section>
-
-<h1>Projekt 1</h1>
-
-<p>
-Här kan du skriva en beskrivning av projektet.
-</p>
-
-</section>
-
-<div class="gallery">
-
-<img src="images/p1-1.jpg">
-<img src="images/p1-2.jpg">
-<img src="images/p1-3.jpg">
-<img src="images/p1-4.jpg">
-<img src="images/p1-5.jpg">
-<img src="images/p1-6.jpg">
-
-</div>
-
-<script src="script.js"></script>
-
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="sv">
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Projekt 2</title>
-
-<link rel="stylesheet" href="style.css">
-
-</head>
-
-<body>
-
-<a class="back" href="index.html">← Tillbaka</a>
-
-<section>
-
-<h1>Projekt 2</h1>
-
-<p>
-Här kan du skriva en beskrivning av projekt 2.
-</p>
-
-</section>
-
-<div class="gallery">
-
-<img src="images/p2-1.jpg">
-<img src="images/p2-2.jpg">
-<img src="images/p2-3.jpg">
-<img src="images/p2-4.jpg">
-<img src="images/p2-5.jpg">
-<img src="images/p2-6.jpg">
-
-</div>
-
-<script src="script.js"></script>
-
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="sv">
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Projekt 3</title>
-
-<link rel="stylesheet" href="style.css">
-
-</head>
-
-<body>
-
-<a class="back" href="index.html">← Tillbaka</a>
-
-<section>
-
-<h1>Projekt 3</h1>
-
-<p>
-Här kan du skriva en beskrivning av projekt 3.
-</p>
-
-</section>
-
-<div class="gallery">
-
-<img src="images/p3-1.jpg">
-<img src="images/p3-2.jpg">
-<img src="images/p3-3.jpg">
-<img src="images/p3-4.jpg">
-<img src="images/p3-5.jpg">
-<img src="images/p3-6.jpg">
-
-</div>
-
-<script src="script.js"></script>
-
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="sv">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projekt 4</title>
-<link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<a class="back" href="index.html">← Tillbaka</a>
-
-<section>
-<h1>Projekt 4</h1>
-
-<p>
-Här kan du skriva en beskrivning av projekt 4.
-</p>
-</section>
-
-<div class="gallery">
-<img src="images/p4-1.jpg">
-<img src="images/p4-2.jpg">
-<img src="images/p4-3.jpg">
-<img src="images/p4-4.jpg">
-<img src="images/p4-5.jpg">
-<img src="images/p4-6.jpg">
-</div>
-
-<script src="script.js"></script>
-
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="sv">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projekt 5</title>
-<link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<a class="back" href="index.html">← Tillbaka</a>
-
-<section>
-<h1>Projekt 5</h1>
-
-<p>
-Här kan du skriva en beskrivning av projekt 5.
-</p>
-</section>
-
-<div class="gallery">
-<img src="images/p5-1.jpg">
-<img src="images/p5-2.jpg">
-<img src="images/p5-3.jpg">
-<img src="images/p5-4.jpg">
-<img src="images/p5-5.jpg">
-<img src="images/p5-6.jpg">
-</div>
-
-<script src="script.js"></script>
-
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="sv">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projekt 6</title>
-<link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<a class="back" href="index.html">← Tillbaka</a>
-
-<section>
-<h1>Projekt 6</h1>
-
-<p>
-Här kan du skriva en beskrivning av projekt 6.
-</p>
-</section>
-
-<div class="gallery">
-<img src="images/p6-1.jpg">
-<img src="images/p6-2.jpg">
-<img src="images/p6-3.jpg">
-<img src="images/p6-4.jpg">
-<img src="images/p6-5.jpg">
-<img src="images/p6-6.jpg">
-</div>
-
-<script src="script.js"></script>
-
-</body>
-</html>
-
