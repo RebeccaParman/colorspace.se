@@ -71,7 +71,7 @@ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:40px;
 }
 
-.circle{
+.project_img{
 width:100%;
 height:auto;
 border-radius:0;
@@ -79,7 +79,7 @@ overflow:visible;
 cursor:pointer;
 }
 
-.circle img{
+.project_img img{
 width:100%;
 height:auto;
 border-radius:0;
@@ -181,10 +181,53 @@ Tillgänglighet: alla dagar i veckan förutom måndag kväll och när det finns 
 
 <section id="projects">
 
-<div class="grid" id="projectGrid"></div>
+<div class="grid">
+
+<a href="projekt/projekt1/">
+    <div class="project_img">
+        <img src="images/project1.jpg" alt="Projekt 1">
+    </div>
+    <div class="project-title">Projekt 1</div>
+</a>
+
+<a href="projekt/projekt2/">
+    <div class="project_img">
+        <img src="images/project2.jpg" alt="Projekt 2">
+    </div>
+    <div class="project-title">Projekt 2</div>
+</a>
+
+<a href="projekt/projekt3/">
+    <div class="project_img">
+        <img src="images/project3.jpg" alt="Projekt 3">
+    </div>
+    <div class="project-title">Projekt 3</div>
+</a>
+
+<a href="projekt/projekt4/">
+    <div class="project_img">
+        <img src="images/project4.jpg" alt="Projekt 4">
+    </div>
+    <div class="project-title">Projekt 4</div>
+</a>
+
+<a href="projekt/projekt5/">
+    <div class="project_img">
+        <img src="images/project5.jpg" alt="Projekt 5">
+    </div>
+    <div class="project-title">Projekt 5</div>
+</a>
+
+<a href="projekt/projekt6/">
+    <div class="project_img">
+        <img src="images/project6.jpg" alt="Projekt 6">
+    </div>
+    <div class="project-title">Projekt 6</div>
+</a>
+
+</div>
 
 </section>
-
 
 <!-- CONTACT -->
 
@@ -222,105 +265,6 @@ function scrollToSection(id){
 document.getElementById(id).scrollIntoView({behavior:"smooth"});
 }
 
-
-/* PROJECT DATA */
-
-const projects = [
-
-{
-title:"Projekt 1",
-img:"images/material_rendering_studier.jpg",
-gallery:[
-"images/material_rendering_studier.jpg",
-"images/material_rendering_studier_2.jpg"
-]
-},
-
-{
-title:"Projekt 2",
-img:"images/material_rendering_studier_2.jpg",
-gallery:[
-"images/material_rendering_studier_2.jpg"
-]
-},
-
-{
-title:"Projekt 3",
-img:"images/Image1.png",
-gallery:[
-"images/Image1.png"
-]
-},
-  
-  {
-title:"Projekt 4",
-img:"images/project4.jpg",
-gallery:[
-"images/project4.jpg"
-]
-},
-
-{
-title:"Projekt 5",
-img:"images/project5.jpg",
-gallery:[
-"images/project5.jpg"
-]
-},
-
-{
-title:"Projekt 6",
-img:"images/project6.jpg",
-gallery:[
-"images/project6.jpg"
-]
-}
-
-];
-/* CREATE GRID */
-
-const grid = document.getElementById("projectGrid");
-
-projects.forEach((p,i)=>{
-
-const div = document.createElement("div");
-
-div.innerHTML = `
-<div class="circle" onclick="openGallery(${i})">
-<img src="${p.img}">
-</div>
-<div class="project-title">${p.title}</div>
-`;
-
-grid.appendChild(div);
-
-});
-
-
-/* OPEN GALLERY */
-
-function openGallery(i){
-
-const galleryHTML = projects[i].gallery.map(img=>`
-<img src="${img}" onclick="fullscreen(this)">
-`).join("");
-
-document.body.innerHTML = `
-<div class="gallery">
-${galleryHTML}
-</div>
-`;
-
-}
-
-
-/* FULLSCREEN IMAGE */
-
-function fullscreen(img){
-
-img.requestFullscreen();
-
-}
 
 </script>
 
