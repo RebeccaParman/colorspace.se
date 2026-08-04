@@ -1,264 +1,71 @@
- <!-- index.html -->
-
 <!DOCTYPE html>
-<html lang="sv">
+
+<html>
+
+
+
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rebecca Parman Aalto Arkitekt</title>
-
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family: Helvetica, Arial, sans-serif;
-}
-
-nav{
-position:fixed;
-top:0;
-width:100%;
-display:flex;
-justify-content:flex-end;
-gap:40px;
-padding:25px;
-z-index:10;
-background:rgba(255,255,255,0.2);
-backdrop-filter: blur(6px);
-}
-
-nav a{
-text-decoration:none;
-color:white;
-font-weight:500;
-cursor:pointer;
-}
-
-section{
-min-height:100vh;
-padding:120px 10%;
-}
-
-/* HERO */
-
-.hero{
-background:url("images/hero.jpg") center/cover no-repeat;
-display:flex;
-align-items:center;
-}
-
-.hero h1{
-font-size:70px;
-color:transparent;
--webkit-text-stroke:2px white;
-max-width:600px;
-}
-
-/* ABOUT */
-
-#about{
-background:#fff;
-line-height:1.7;
-font-size:18px;
-}
-
-/* PROJECTS */
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:40px;
-}
-
-.circle{
-width:100%;
-height:auto;
-border-radius:0;
-overflow:visible;
-cursor:pointer;
-}
-
-.circle img{
-width:100%;
-height:auto;
-border-radius:0;
-object-fit:contain;
-display:block;
-}
-
-.project-title{
-text-align:center;
-margin-top:10px;
-}
-
-/* GALLERY */
-
-.gallery{
-display:grid;
-grid-template-columns:1fr 1fr;
-}
-
-.gallery img{
-width:100%;
-height:100vh;
-object-fit:cover;
-cursor:pointer;
-}
-
-/* CONTACT */
-
-form{
-display:flex;
-flex-direction:column;
-gap:15px;
-max-width:500px;
-}
-
-input, textarea{
-padding:12px;
-border:1px solid #ccc;
-}
-
-button{
-padding:14px;
-border:none;
-background:black;
-color:white;
-cursor:pointer;
-}
-
-</style>
+    ...
+    <style>
+        ...
+    </style>
 </head>
 
 
+ 
 <body>
 
-<nav>
-<a onclick="scrollToSection('about')">About</a>
-<a onclick="scrollToSection('projects')">Projects</a>
-<a onclick="scrollToSection('contact')">Contact</a>
-</nav>
+    <!-- Navigation -->
+    <nav>
+        ...
+    </nav>
 
+    <!-- Hero -->
+    <section class="hero">
+        ...
+    </section>
 
-<!-- HERO -->
+    <!-- About -->
+    <section id="about">
+        ...
+    </section>
 
+    <!-- Projects -->
+    <section id="projects">
+        ...
+    </section>
 
+    <!-- Contact -->
+    <section id="contact">
+        ...
+    </section>
 
-</section>
+    <script>
 
+        // Scroll-funktion
+        ...
 
-<!-- ABOUT -->
+        // Projektdata
+        const projects = [
+            ...
+        ];
 
-<section id="about">
+        // Skapa projekt
+        ...
 
-<p>
-Colorspace är ett företag skapat av arkitekten Rebecca Parman Aalto med en vision om en färggrannare samhällsmiljö. Både i den fysiska gestaltningen och sociala värden. Colorspace:s vision är att låta färg, form och kreativitet ta plats i våra byggda miljöer.
-</p>
+        // Öppna galleri
+        ...
 
-<br>
+        // Fullskärm
+        ...
 
-<p>
-Jag, Rebecca Parman Aalto, har en bakgrund inom konst och IT samt ett starkt tekniskt intresse. Program jag använder inkluderar bland annat:
-AutoCAD, Rhinoceros 8, Revit, Affinity, Illustrator, Photoshop, D5, Twin Motion, Blender, med fler.
-</p>
-
-<br>
-
-<p>
-Jag studerar nu åk2 på Arkitektutbildningen, KTH.
-Tillgänglighet: alla dagar i veckan förutom måndag kväll och när det finns obligatoriska föreläsningar.
-</p>
-
-</section>
-
-
-<body>
-
-<nav>
-
-<a href="#about">About</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-
-</nav>
-
-
-
-<section id="about">
-
-<h2>About</h2>
-
-<p>
-Colorspace är ett företag skapat av Rebecca Parman Aalto med en vision om en färggrannare samhällsmiljö.
-</p>
-
-</section>
-
-<section id="projects">
-
-<h2>Projekt</h2>
-
-<div class="projects">
-
-<a class="project" href="projekt/projekt1/">
-<img src="images/project1.jpg">
-<h3>Projekt 1</h3>
-</a>
-
-<a class="project" href="projekt/projekt2/">
-<img src="images/project2.jpg">
-<h3>Projekt 2</h3>
-</a>
-
-<a class="project" href="projekt/projekt3/">
-<img src="images/project3.jpg">
-<h3>Projekt 3</h3>
-</a>
-
-<a class="project" href="projekt/projekt4/">
-<img src="images/project4.jpg">
-<h3>Projekt 4</h3>
-</a>
-
-<a class="project" href="projekt/projekt5/">
-<img src="images/project5.jpg">
-<h3>Projekt 5</h3>
-</a>
-
-<a class="project" href="projekt/projekt6/">
-<img src="images/project6.jpg">
-<h3>Projekt 6</h3>
-</a>
-
-</div>
-
-</section>
-
-<section id="contact">
-
-<h2>Kontakt</h2>
-
-<p>
-
-Rebecca Parman Aalto
-
-<br>
-
-0704376416
-
-<br>
-
-parman.rebecca@hotmail.com
-
-</p>
-
-</section>
+    </script>
 
 </body>
+#BODY
 
+
+
+ 
 </html>
-
-
