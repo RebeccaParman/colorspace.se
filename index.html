@@ -7,8 +7,57 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rebecca Parman Aalto Arkitekt</title>
 
-<link rel="stylesheet" href="style.css">
 
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Helvetica, Arial, sans-serif;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:flex-end;
+gap:40px;
+padding:25px;
+z-index:10;
+background:rgba(255,255,255,0.2);
+backdrop-filter: blur(6px);
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-weight:500;
+cursor:pointer;
+}
+
+section{
+min-height:100vh;
+padding:120px 10%;
+}
+
+/* HERO */
+
+.hero{
+background:url("images/hero.jpg") center/cover no-repeat;
+display:flex;
+align-items:center;
+}
+
+.hero h1{
+font-size:70px;
+color:transparent;
+-webkit-text-stroke:2px white;
+max-width:600px;
+}
+
+</style>
 </head>
 
 <body>
