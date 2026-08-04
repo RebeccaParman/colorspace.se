@@ -57,8 +57,127 @@ color:transparent;
 max-width:600px;
 }
 
+/* ABOUT */
+
+#about{
+background:#fff;
+line-height:1.7;
+font-size:18px;
+}
+
+/* PROJECTS */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+}
+
+.circle{
+width:100%;
+height:auto;
+border-radius:0;
+overflow:visible;
+cursor:pointer;
+}
+
+.circle img{
+width:100%;
+height:auto;
+border-radius:0;
+object-fit:contain;
+display:block;
+}
+
+.project-title{
+text-align:center;
+margin-top:10px;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:1fr 1fr;
+}
+
+.gallery img{
+width:100%;
+height:100vh;
+object-fit:cover;
+cursor:pointer;
+}
+
+/* CONTACT */
+
+form{
+display:flex;
+flex-direction:column;
+gap:15px;
+max-width:500px;
+}
+
+input, textarea{
+padding:12px;
+border:1px solid #ccc;
+}
+
+button{
+padding:14px;
+border:none;
+background:black;
+color:white;
+cursor:pointer;
+}
+
 </style>
 </head>
+
+
+<body>
+
+<nav>
+<a onclick="scrollToSection('about')">About</a>
+<a onclick="scrollToSection('projects')">Projects</a>
+<a onclick="scrollToSection('contact')">Contact</a>
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>
+Rebecca Parman Aalto Arkitekt
+</h1>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<p>
+Colorspace är ett företag skapat av arkitekten Rebecca Parman Aalto med en vision om en färggrannare samhällsmiljö. Både i den fysiska gestaltningen och sociala värden. Colorspace:s vision är att låta färg, form och kreativitet ta plats i våra byggda miljöer.
+</p>
+
+<br>
+
+<p>
+Jag, Rebecca Parman Aalto, har en bakgrund inom konst och IT samt ett starkt tekniskt intresse. Program jag använder inkluderar bland annat:
+AutoCAD, Rhinoceros 8, Revit, Affinity, Illustrator, Photoshop, D5, Twin Motion, Blender, med fler.
+</p>
+
+<br>
+
+<p>
+Jag studerar nu åk2 på Arkitektutbildningen, KTH.
+Tillgänglighet: alla dagar i veckan förutom måndag kväll och när det finns obligatoriska föreläsningar.
+</p>
+
+</section>
+
 
 <body>
 
